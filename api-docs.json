@@ -8,18 +8,5 @@
             "path": "/webhooks",
             "description": "Webhook resources"
         }
-    ],
-    "authentication": {
-        "type": "custom",
-        "parameters": [
-            {
-                "name": "apiKey",
-                "description": "API Key",
-                "paramType": "string",
-                "required": true,
-                "dataType": "string",
-                "viewClass": "TextFieldView"
-            }
-        ]
-    }
+    ]
 }
