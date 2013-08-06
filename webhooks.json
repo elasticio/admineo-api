@@ -1,0 +1,195 @@
+{
+    "apiVersion": "v1",
+    "swaggerVersion": "1.1",
+    "basePath": "https://admineo.de/api/v1",
+    "resourcePath": "{{WEBHOOK_URI}}",
+    "apis": [
+        {
+            "path": "{{WEBHOOK_URI}}",
+            "description": "Webhook resources",
+            "operations": [
+                {
+                    "httpMethod": "POST",
+                    "summary": "Register Webhook",
+                    "responseClass": "WebhookResponse",
+                    "nickname": "registerWebhook"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "WebhookResponse": {
+            "id": "WebhookResponse",
+            "type":"object",
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "required":false,
+            "properties":{
+                "event": {
+                    "enum": [
+                        "product.created",
+                        "product.updated",
+                        "product.deleted" ]
+                },
+                "id": {
+                    "type":"string",
+                    "id": "id",
+                    "description": "Id of the event. Can be used for internal processed/unprocessed handling."
+                },
+                "payload": {
+                    "type":"object",
+                    "id": "http://jsonschema.net/payload",
+                    "required":false,
+                    "properties":{
+                        "product": {
+                            "type":"object",
+                            "id": "http://jsonschema.net/payload/product",
+                            "required":false,
+                            "properties":{
+                                "category_paths": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/payload/product/category_paths",
+                                    "required":false,
+                                    "items":
+                                    {
+                                        "type":"string",
+                                        "id": "http://jsonschema.net/payload/product/category_paths/0",
+                                        "required":false
+                                    }
+
+                                },
+                                "delivery_time_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/delivery_time_name",
+                                    "required":false
+                                },
+                                "description_long": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/description_long",
+                                    "required":false
+                                },
+                                "description_teaser": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/description_teaser",
+                                    "required":false
+                                },
+                                "ean": {
+                                    "type":"null",
+                                    "id": "http://jsonschema.net/payload/product/ean",
+                                    "required":false
+                                },
+                                "erp_group_names": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/erp_group_names",
+                                    "required":false
+                                },
+                                "id": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/id",
+                                    "required":false
+                                },
+                                "images": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/payload/product/images",
+                                    "required":false,
+                                    "items":
+                                    {
+                                        "type":"object",
+                                        "id": "http://jsonschema.net/payload/product/images/0",
+                                        "required":false,
+                                        "properties":{
+                                            "filename": {
+                                                "type":"string",
+                                                "id": "http://jsonschema.net/payload/product/images/0/filename",
+                                                "required":false
+                                            },
+                                            "image_url": {
+                                                "type":"string",
+                                                "id": "http://jsonschema.net/payload/product/images/0/image_url",
+                                                "required":false
+                                            }
+                                        }
+                                    }
+
+
+                                },
+                                "keyword_names": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/keyword_names",
+                                    "required":false
+                                },
+                                "manufacturer_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/manufacturer_name",
+                                    "required":false
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/name",
+                                    "required":false
+                                },
+                                "packing_unit": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/packing_unit",
+                                    "required":false
+                                },
+                                "pid": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/pid",
+                                    "required":false
+                                },
+                                "prices": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/payload/product/prices",
+                                    "required":false,
+                                    "items":
+                                    {
+                                        "type":"object",
+                                        "id": "http://jsonschema.net/payload/product/prices/0",
+                                        "required":false,
+                                        "properties":{
+                                            "cents": {
+                                                "type":"number",
+                                                "id": "http://jsonschema.net/payload/product/prices/0/cents",
+                                                "required":false
+                                            },
+                                            "currency": {
+                                                "type":"string",
+                                                "id": "http://jsonschema.net/payload/product/prices/0/currency",
+                                                "required":false
+                                            },
+                                            "lower_bound": {
+                                                "type":"number",
+                                                "id": "http://jsonschema.net/payload/product/prices/0/lower_bound",
+                                                "required":false
+                                            },
+                                            "price_type": {
+                                                "type":"string",
+                                                "id": "http://jsonschema.net/payload/product/prices/0/price_type",
+                                                "required":false
+                                            }
+                                        }
+                                    }
+                                },
+                                "stock_quantity": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/payload/product/stock_quantity",
+                                    "required":false
+                                },
+                                "supplier_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/payload/product/supplier_name",
+                                    "required":false
+                                },
+                                "supplier_pid": {
+                                    "type":"null",
+                                    "id": "http://jsonschema.net/payload/product/supplier_pid",
+                                    "required":false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

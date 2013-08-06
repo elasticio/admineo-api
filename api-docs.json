@@ -1,0 +1,25 @@
+{
+    "apiVersion": "v1",
+    "description": "admineo - Modern data exchange between suppliers and their merchants",
+    "swaggerVersion": "1.1",
+    "basePath": "https://admineo.de/api/v1",
+    "apis": [
+        {
+            "path": "/webhooks",
+            "description": "Webhook resources"
+        }
+    ],
+    "authentication": {
+        "type": "custom",
+        "parameters": [
+            {
+                "name": "apiKey",
+                "description": "API Key",
+                "paramType": "string",
+                "required": true,
+                "dataType": "string",
+                "viewClass": "TextFieldView"
+            }
+        ]
+    }
+}
