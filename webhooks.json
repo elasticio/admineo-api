@@ -10,7 +10,7 @@
             "operations": [
                 {
                     "httpMethod": "POST",
-                    "summary": "Register Webhook",
+                    "summary": "Receive Updates Through Webhook",
                     "responseClass": "WebhookResponse",
                     "nickname": "registerWebhook"
                 }
