@@ -58,31 +58,37 @@
 
                                 },
                                 "delivery_time_name": {
+                                    "title": "Delivery Time Name",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/delivery_time_name",
                                     "required":false
                                 },
                                 "description_long": {
+                                    "title" : "Description Long",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/description_long",
                                     "required":false
                                 },
                                 "description_teaser": {
+                                    "title" : "Description Teaser",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/description_teaser",
                                     "required":false
                                 },
                                 "ean": {
+                                    "title": "Ean",
                                     "type":"null",
                                     "id": "http://jsonschema.net/payload/product/ean",
                                     "required":false
                                 },
                                 "erp_group_names": {
+                                    "title": "ERP Group Names",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/erp_group_names",
                                     "required":false
                                 },
                                 "id": {
+                                    "title": "Product Id",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/id",
                                     "required":false
@@ -113,26 +119,31 @@
 
                                 },
                                 "keyword_names": {
+                                    "title":"Keyword Names",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/keyword_names",
                                     "required":false
                                 },
                                 "manufacturer_name": {
+                                    "title":"Manufacturer Name",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/manufacturer_name",
                                     "required":false
                                 },
                                 "name": {
+                                    "title":"Name",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/name",
                                     "required":false
                                 },
                                 "packing_unit": {
+                                    "title":"Packaging Unit",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/packing_unit",
                                     "required":false
                                 },
                                 "pid": {
+                                    "title":"Pid",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/pid",
                                     "required":false
@@ -171,16 +182,19 @@
                                     }
                                 },
                                 "stock_quantity": {
+                                    "title":"Stock Quantity",
                                     "type":"number",
                                     "id": "http://jsonschema.net/payload/product/stock_quantity",
                                     "required":false
                                 },
                                 "supplier_name": {
+                                    "title":"Supplier Name",
                                     "type":"string",
                                     "id": "http://jsonschema.net/payload/product/supplier_name",
                                     "required":false
                                 },
                                 "supplier_pid": {
+                                    "title":"Supplier Pid",
                                     "type":"null",
                                     "id": "http://jsonschema.net/payload/product/supplier_pid",
                                     "required":false
